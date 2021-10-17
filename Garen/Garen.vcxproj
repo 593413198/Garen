@@ -69,7 +69,10 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>E:\github\Garen\Garen\include;E:\github\Garen\dependence\glad\include;E:\github\Garen\dependence\glfw-3.3.4.bin.WIN64\include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\github\Garen\dependence\glfw-3.3.4.bin.WIN64\lib-vc2017;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -90,6 +93,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -123,6 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="draw.cpp" />
+    <ClCompile Include="glad.c" />
+    <ClCompile Include="input.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\const.h" />
+    <ClInclude Include="include\draw.h" />
+    <ClInclude Include="include\global.h" />
+    <ClInclude Include="include\gvector.h" />
+    <ClInclude Include="include\input.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
