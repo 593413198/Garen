@@ -11,3 +11,10 @@
 - draw: 绘制基本图形
 - input: 输入
 - gvector: 矩阵库
+
+### v1.0.1
+- gshader: 读取和编译shader
+- ./shader: 存放vs, ps
+
+### v.1.0.2
+- texture: 纹理贴图的支持
