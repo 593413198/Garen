@@ -128,6 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="garengl.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -135,6 +136,7 @@
     <ClInclude Include="..\dependence\filesystem.h" />
     <ClInclude Include="..\dependence\stb_image.h" />
     <ClInclude Include="camera.h" />
+    <ClInclude Include="garengl.h" />
     <ClInclude Include="shader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
