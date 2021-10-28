@@ -70,7 +70,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>E:\github\Garen\Garen\include;E:\github\Garen\dependence\glad\include;E:\github\Garen\dependence\glfw-3.3.4.bin.WIN64\include;$(IncludePath)</IncludePath>
+    <IncludePath>E:\github\Garen\Garen;E:\github\Garen\dependence\glad\include;E:\github\Garen\dependence\glfw-3.3.4.bin.WIN64\include;E:\github\Garen\dependence;$(IncludePath)</IncludePath>
     <LibraryPath>E:\github\Garen\dependence\glfw-3.3.4.bin.WIN64\lib-vc2017;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -128,22 +128,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="draw.cpp" />
     <ClCompile Include="glad.c" />
-    <ClCompile Include="gshader.cpp" />
-    <ClCompile Include="input.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\const.h" />
-    <ClInclude Include="include\draw.h" />
-    <ClInclude Include="include\filesystem.h" />
-    <ClInclude Include="include\global.h" />
-    <ClInclude Include="include\gshader.h" />
-    <ClInclude Include="include\gvector.h" />
-    <ClInclude Include="include\input.h" />
-    <ClInclude Include="include\stb_image.h" />
-    <ClInclude Include="resource.h" />
+    <ClInclude Include="..\dependence\filesystem.h" />
+    <ClInclude Include="..\dependence\stb_image.h" />
+    <ClInclude Include="camera.h" />
+    <ClInclude Include="shader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

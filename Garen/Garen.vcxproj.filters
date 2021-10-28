@@ -15,48 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="draw.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="glad.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="input.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="gshader.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\const.h">
+    <ClInclude Include="..\dependence\stb_image.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="include\draw.h">
+    <ClInclude Include="shader.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="include\global.h">
+    <ClInclude Include="camera.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="include\gvector.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="include\input.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="include\gshader.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="include\stb_image.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="include\filesystem.h">
+    <ClInclude Include="..\dependence\filesystem.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
