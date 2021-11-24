@@ -37,6 +37,7 @@ glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
 float deltaTime = 0.0f;	// time between current frame and last frame
 float lastFrame = 0.0f;
 
+
 int main()
 {
 	glInit(SCR_WIDTH, SCR_HEIGHT);
@@ -50,9 +51,8 @@ int main()
 
 	// build and compile our shader zprogram
 	// ------------------------------------
-	//Shader lightingShader("shader/lighting.vs", "shader/lighting.ps");
 	Shader lightingShader("shader/lightmap.vs", "shader/lightmap.ps");
-	Shader lightCubeShader("shader/lightcube.vs", "shader/lightcube.ps");
+	//Shader directionalLightShader("shader/lightmap.vs", "shader/lightmap.ps");
 
 	// set up vertex data (and buffer(s)) and configure vertex attributes
 	// ------------------------------------------------------------------
@@ -162,7 +162,8 @@ int main()
 
 		// be sure to activate shader when setting uniforms/drawing objects
 		lightingShader.use();
-		lightingShader.setVec3("light.position", lightPos);
+		//lightingShader.setVec3("light.position", lightPos);
+		lightingShader.setVec3("light.direction", 0.f, -1.0f, -1.0f);
 		lightingShader.setVec3("viewPos", camera.Position);
 
 		// light properties
@@ -171,7 +172,7 @@ int main()
 		lightingShader.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
 
 		// material properties
-		lightingShader.setFloat("material.shininess", 64.0f);
+		lightingShader.setFloat("material.shininess", 32.0f);
 
 		// view/projection transformations
 		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
@@ -196,13 +197,13 @@ int main()
 
 
 		// also draw the lamp object
-		lightCubeShader.use();
-		lightCubeShader.setMat4("projection", projection);
-		lightCubeShader.setMat4("view", view);
-		model = glm::mat4(1.0f);
-		model = glm::translate(model, lightPos);
-		model = glm::scale(model, glm::vec3(0.2f)); // a smaller cube
-		lightCubeShader.setMat4("model", model);
+		//directionalLightShader.use();
+		//directionalLightShader.setMat4("projection", projection);
+		//directionalLightShader.setMat4("view", view);
+		//model = glm::mat4(1.0f);
+		//model = glm::translate(model, lightPos);
+		//model = glm::scale(model, glm::vec3(0.2f)); // a smaller cube
+		//directionalLightShader.setMat4("model", model);
 
 		glBindVertexArray(lightCubeVAO);
 		glDrawArrays(GL_TRIANGLES, 0, 36);
@@ -232,6 +233,9 @@ void processInput(GLFWwindow *window)
 {
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, true);
+
+	if (glfwGetKey(window, GLFW_KEY_C) == GLFW_PRESS)
+		camera.stopMoving = true;
 
 	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
 		camera.ProcessKeyboard(FORWARD, deltaTime);
