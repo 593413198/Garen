@@ -17,4 +17,6 @@
 - ./shader: 存放vs, ps
 
 ### v.1.0.2
-- texture: 纹理贴图的支持
+- Model and Mesh
+- Assimp for loading model
+- imgUI environment
