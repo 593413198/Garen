@@ -8,13 +8,10 @@
 
 ### v1.0.0
 - main loop of engine
-- draw: 绘制基本图形
-- input: 输入
-- gvector: 矩阵库
+- draw, input and vector
 
 ### v1.0.1
-- gshader: 读取和编译shader
-- ./shader: 存放vs, ps
+- shader readfile and compile
 
 ### v.1.0.2
 - Model and Mesh
