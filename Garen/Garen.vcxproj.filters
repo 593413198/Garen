@@ -21,9 +21,6 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="garengl.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="..\dependence\imgui\imgui.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -43,6 +40,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="..\dependence\imgui\imgui_demo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\dependence\imgui\backends\imgui_impl_opengl3.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
