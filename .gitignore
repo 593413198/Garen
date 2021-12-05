@@ -260,3 +260,16 @@ paket-files/
 __pycache__/
 *.pyc
 /Garen/imgui.ini
+/Garen/resources/models/Sponza/*.md
+/Garen/resources/models/Sponza/*.mtl
+/Garen/resources/models/Sponza/textures/*.db
+/Garen/resources/models/Sponza/textures/*.tga
+/Garen/resources/models/low_poly_tree/*.ZBP
+/Garen/resources/models/low_poly_tree/*.ZTL
+/Garen/resources/models/low_poly_tree/*.c4d
+/Garen/resources/models/low_poly_tree/*.dae
+/Garen/resources/models/low_poly_tree/*.fbx
+/Garen/resources/models/low_poly_tree/*.lxo
+/Garen/resources/models/low_poly_tree/*.ma
+/Garen/resources/models/low_poly_tree/*.max
+/Garen/resources/models/low_poly_tree/*.mtl
